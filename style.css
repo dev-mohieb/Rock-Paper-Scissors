@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    align-content: space-between;
+    place-items: center;
+    padding: 1rem 1rem 0 1rem;
+    background-image: url(images/peakpx.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main {
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    margin-top: 2rem;
+    border: 4px solid #111;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#top-part {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: skyblue;
+    border-radius: 9px 9px 0 0;
+}
+.play-area{
+    color: bisque;
+    background-color: #111;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 30px solid skyblue;
+    border-bottom: 30px solid skyblue;
+    border-radius: 90px;
+}
+#vs-el {
+    font-family: 'Press Start 2P', sans-serif;
+}
+#player-choice, #pc-choice {
+    font-size: 5rem;
+}
+.score-board {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    height: 50%;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: 'Press Start 2P', sans-serif;
+
+}
+.name-banner {
+    background-color: rgb(255, 255, 179);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 12px;
+}
+.score-banner {
+    font-size: 4rem;
+}
+#bottom-part {
+    background-color: rgb(253, 194, 203);
+    border-radius: 0 0 9px 9px;
+}
+#bottom-part, #bottom-part article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bottom-part article {
+    width: 100%;
+    height: 100%;
+}
+#bottom-part button {
+    font-size: 5rem;
+    padding: 1rem 2rem;
+    color: bisque;
+    background-color: hsl(180, 7%, 22%);
+    border: none;
+    border-radius: 6px;
+    transition: background-color .2s ease;
+    cursor: pointer;
+}
+#bottom-part button:hover {
+    background-color: hsl(180, 7%, 32%);
+}
+#bottom-part button:active {
+    background-color: hsl(180, 7%, 12%);
+}
+
+footer {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+    rgba(17, 17, 17, 0.664),
+    black
+    );
+    color: white;
+    border-radius: 6px 6px 0 0;
+    font-family: 'Changa', sans-serif;
+}
+footer a {
+    color: white;
+}
