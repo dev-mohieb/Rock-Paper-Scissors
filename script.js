@@ -57,23 +57,32 @@ function checkWinner() {
         <section class="play-area">
                 <article id="pc-choice"> 
                 </article>
-                <span id="vs-el">${playerName} Won!</span>
+                <span id="vs-el">${playerName} WON!</span>
                 <article id="player-choice">    
                 </article>
             </section>
         `
+        
+        playerScore = 0
+        pcScore = 0
+        playerScoreEl.textContent = 0
+        pcScoreEl.textContent = 0
+
     } else  if (pcScore == 5) {
         playArea.innerHTML = `
         <section class="play-area">
                 <article id="pc-choice"> 
                 </article>
-                <span id="vs-el">A.I Won!</span>
+                <span id="vs-el">A.I WON!</span>
                 <article id="player-choice">    
                 </article>
             </section>
         `
+        playerScore = 0
+        pcScore = 0
+        playerScoreEl.textContent = 0
+        pcScoreEl.textContent = 0
     }
-
 }
 
 
