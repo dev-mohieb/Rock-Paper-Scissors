@@ -176,7 +176,7 @@ main {
 #top-part {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1.5fr 1fr;
-    padding: 1rem 2rem 0 2rem;
+    padding: 0 1rem;
 }
 .play-area{
     width: 100%;
@@ -188,14 +188,18 @@ main {
     flex-direction: column;
 }
 .around-play-area {
-    height: 280px;
-    width: 100%;
+    height: 230px;
+    width: 90%;
+    margin: 0 auto;
 }
 #player-choice {
     margin-bottom: 1rem;
 }
 #pc-choice {
     margin-top: 1rem;
+}
+#player-choice, #pc-choice {
+    font-size: 3.5rem;
 }
 .score-board {
     height: 70%;
@@ -220,13 +224,6 @@ main {
     main {
         width: 95%;
         grid-template-rows: 3fr 1fr;
-    }
-    
-    #top-part {
-        padding: 1rem 1rem 0 1rem;
-    }
-    #player-choice, #pc-choice {
-        font-size: 4rem;
     }
     .score-board {
         height: 70%;
@@ -254,7 +251,6 @@ main {
     }
     .around-play-area {
         width: 90%;
-        margin: 0 auto;
     }
     #player-choice, #pc-choice {
         font-size: 4rem;
