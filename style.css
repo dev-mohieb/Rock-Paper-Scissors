@@ -159,7 +159,7 @@ footer {
     color: white;
     border-radius: 6px 6px 0 0;
     font-family: 'Changa', sans-serif;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 footer a {
