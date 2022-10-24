@@ -7,6 +7,10 @@ const playerNameEl = document.getElementById("player-name")
 const playerScoreEl = document.getElementById("player-score")
 const playerChoice = document.getElementById("player-choice")
 const playArea = document.querySelector(".play-area")
+const statusEl = document.getElementById("status-el")
+const vsEl = document.getElementById("vs-el")
+const startGameBtn = document.getElementById("start-game-btn")
+const nameInput = document.getElementById("name-el")
 const rockSymbol = '<i class="fa-solid fa-hand-back-fist"></i>'
 const paperSymbol = '<i class="fa-solid fa-hand"></i>'
 const scissorsSymbol = '<i class="fa-solid fa-hand-scissors"></i>'
@@ -16,11 +20,28 @@ let pcScore = 0
 let playerScore = 0
 let playerWin = false
 let pcWin = false
+let playerName = 'PLAYER 1'
 
-let playerName = prompt("What's your name?", "player 1").toUpperCase()
-playerNameEl.textContent = playerName.toUpperCase()
+rockBtn.disabled = true
+paperBtn.disabled = true
+scissorsBtn.disabled = true
+
+startGameBtn.addEventListener("click", () => {
+    playerName = nameInput.value.toUpperCase()
+    playerNameEl.textContent = playerName
+    nameInput.classList.add("hidden")
+    startGameBtn.classList.add("hidden")
+    vsEl.textContent = 'VS'
+    rockBtn.disabled = false
+    paperBtn.disabled = false
+    scissorsBtn.disabled = false
+    playerScoreEl.textContent = 0
+    pcScoreEl.textContent = 0
+})
 
 function renderGame() {
+    playerScoreEl.textContent = 0
+    pcScoreEl.textContent = 0
 
     if (playerChoice.innerHTML == rockSymbol &&
         pcChoice.innerHTML == scissorsSymbol) {
@@ -53,36 +74,28 @@ function renderScore() {
 
 function checkWinner() {
     if (playerScore == 5) {
-        playArea.innerHTML = `
-        <section class="play-area">
-                <article id="pc-choice"> 
-                </article>
-                <span id="vs-el">${playerName} WON!</span>
-                <article id="player-choice">    
-                </article>
-            </section>
-        `
-        
-        playerScore = 0
-        pcScore = 0
-        playerScoreEl.textContent = 0
-        pcScoreEl.textContent = 0
+        vsEl.textContent = `${playerName} WON!`
+        rockBtn.disabled = true
+        paperBtn.disabled = true
+        scissorsBtn.disabled = true
+        reset()
 
-    } else  if (pcScore == 5) {
-        playArea.innerHTML = `
-        <section class="play-area">
-                <article id="pc-choice"> 
-                </article>
-                <span id="vs-el">A.I WON!</span>
-                <article id="player-choice">    
-                </article>
-            </section>
-        `
-        playerScore = 0
-        pcScore = 0
-        playerScoreEl.textContent = 0
-        pcScoreEl.textContent = 0
+    } else if (pcScore == 5) {
+        vsEl.textContent = `A.I WON!`
+        rockBtn.disabled = true
+        paperBtn.disabled = true
+        scissorsBtn.disabled = true
+        reset()
     }
+}
+
+function reset() {
+    playerScore = 0
+    pcScore = 0
+    pcChoice.innerHTML = ""
+    playerChoice.innerHTML = ""
+    startGameBtn.classList.remove("hidden")
+    startGameBtn.textContent = `Play Again`
 }
 
 

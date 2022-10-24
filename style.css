@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 body {
     min-height: 100vh;
@@ -21,32 +22,69 @@ main {
     display: grid;
     grid-template-rows: 2fr 1fr;
     margin-top: 2rem;
-    border: 4px solid #111;
+    border: 3px solid #111;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 10px 10px rgba(17, 17, 17, 0.664);
 }
 
 #top-part {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 2fr 1fr;
-    background-color: skyblue;
+    background-color: rgb(135, 206, 235);
     border-radius: 9px 9px 0 0;
 }
 .play-area{
+    flex-shrink: 0;
     color: bisque;
     background-color: #111;
+    height: 100%;
+    width: 100%;
+    align-self: center;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-top: 30px solid skyblue;
-    border-bottom: 30px solid skyblue;
-    border-radius: 90px;
 }
-#vs-el {
+.around-play-area {
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+    /* border: 3px solid rgb(255, 235, 124); */
+}
+#status-el {
     font-family: 'Press Start 2P', sans-serif;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-basis: 1;
+    gap: 1rem;
+}
+#status-el input {
+    text-align: center;
+    font-family: inherit;
+    height: 30px;
+    width: 200px;
+}
+#status-el button {
+    /* margin-top: 2rem; */
+    margin-bottom: -1rem;
+    padding: .5rem 1rem;
+    font-family: inherit;
+    border: none;
+    font-size: .8rem;
+}
+.hidden {
+    display: none;
 }
 #player-choice, #pc-choice {
     font-size: 5rem;
+    min-width: 85px;
+    text-align: center;
 }
 .score-board {
     text-align: center;
@@ -64,7 +102,7 @@ main {
 
 }
 .name-banner {
-    background-color: rgb(255, 255, 179);
+    background-color: rgb(255, 235, 124);
     color: rgb(0, 0, 0);
     width: 100%;
     height: 30%;
