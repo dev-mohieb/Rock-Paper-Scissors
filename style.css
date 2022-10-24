@@ -17,7 +17,7 @@ body {
     background-position: center;
 }
 main {
-    max-width: 800px;
+    width: 750px;
     height: 500px;
     display: grid;
     grid-template-rows: 2fr 1fr;
@@ -65,16 +65,19 @@ main {
 #status-el input {
     text-align: center;
     font-family: inherit;
-    height: 30px;
+    height: 35px;
     width: 200px;
+    padding: 1rem 0;
+    border: 0;
 }
 #status-el button {
     /* margin-top: 2rem; */
     margin-bottom: -1.5rem;
-    padding: .5rem 1rem;
+    padding:1rem;
     font-family: inherit;
     border: none;
     font-size: .8rem;
+    background-color: hsl(0, 2%, 89%);
 }
 .hidden {
     display: none;
@@ -209,6 +212,7 @@ main {
 #bottom-part button {
     font-size: 5rem;
     padding: 1.5rem;
+    cursor: default;
 }
 }
 

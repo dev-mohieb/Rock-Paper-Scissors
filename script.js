@@ -78,6 +78,8 @@ function checkWinner() {
         rockBtn.disabled = true
         paperBtn.disabled = true
         scissorsBtn.disabled = true
+        pcWin = false
+        playerWin = true
         reset()
 
     } else if (pcScore == 5) {
@@ -85,6 +87,8 @@ function checkWinner() {
         rockBtn.disabled = true
         paperBtn.disabled = true
         scissorsBtn.disabled = true
+        pcWin = true
+        playerWin = false
         reset()
     }
 }
@@ -100,17 +104,20 @@ function reset() {
 
 
 rockBtn.addEventListener("click", () => {
-    pcChoice.innerHTML = `${array[Math.floor(Math.random() * 3)]}`
     playerChoice.innerHTML = `${rockSymbol}`
-    renderGame()
+    pcChoice.innerHTML = `${array[Math.floor(Math.random() * 3)]}`
+        renderGame()
+
 })
 paperBtn.addEventListener("click", () => {
-    pcChoice.innerHTML = `${array[Math.floor(Math.random() * 3)]}`
     playerChoice.innerHTML = `${paperSymbol}`
-    renderGame()
+    pcChoice.innerHTML = `${array[Math.floor(Math.random() * 3)]}`
+        renderGame()
+
 })
 scissorsBtn.addEventListener("click", () => {
-    pcChoice.innerHTML = `${array[Math.floor(Math.random() * 3)]}`
     playerChoice.innerHTML = `${scissorsSymbol}`
+    
+    pcChoice.innerHTML = `${array[Math.floor(Math.random() * 3)]}`
     renderGame()
 })
