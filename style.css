@@ -146,20 +146,14 @@ main {
 
 footer {
     height: 30px;
-    width: 80%;
+    width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(
-    rgba(17, 17, 17, 0.664),
-    black
-    );
     color: white;
-    border-radius: 6px 6px 0 0;
     font-family: 'Changa', sans-serif;
-    position: fixed;
-    bottom: 0;
+    
 }
 footer a {
     color: white;
@@ -169,13 +163,14 @@ footer a {
 
 main {
     width: 90%;
-    height: 90vh;
+    height: 90%;
 }
 
 #top-part {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1.5fr 1fr;
     padding: 0 1rem;
+    height: 100%;
 }
 .play-area{
     width: 100%;
@@ -202,7 +197,7 @@ main {
 }
 .score-board {
     height: 70%;
-    width: 80%;
+    width: 50%;
 }
 #bottom-part {
     padding: 0 1rem;
@@ -222,11 +217,10 @@ main {
 
     main {
         width: 95%;
-        grid-template-rows: 3fr 1fr;
+        grid-template-rows: 2fr 1fr;
     }
     .score-board {
         height: 70%;
-        width: 70%;
     }
     .score-banner {
         font-size: 3.5rem;
@@ -236,10 +230,23 @@ main {
     }
     #bottom-part button {
         font-size: 4rem;
-        padding: 2rem 1.2rem;
+        padding: 2rem 1.7rem;
     }
 }
 
+@media (max-width: 510px) {
+    #bottom-part button {
+        font-size: 4rem;
+        padding: 2rem 1.4rem;
+    }
+}
+
+@media (max-width: 460px) {
+    #bottom-part button {
+        font-size: 4rem;
+        padding: 2rem 1.1rem;
+    }
+}
 @media (max-width: 426px) {
     main {
         width: 100%;
@@ -251,12 +258,8 @@ main {
     .around-play-area {
         width: 90%;
     }
-    #player-choice, #pc-choice {
-        font-size: 4rem;
-    }
     .score-board {
         height: 70%;
-        width: 70%;
     }
     .score-banner {
         font-size: 3.5rem;
@@ -266,6 +269,6 @@ main {
     }
     #bottom-part button {
         font-size: 4rem;
-        padding: 2rem 1rem;
+        padding: 2rem 1.2rem;
     }
 }
