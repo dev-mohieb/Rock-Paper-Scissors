@@ -31,7 +31,7 @@ main {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 2fr 1fr;
-    background-color: rgb(135, 206, 235);
+    background-color: rgba(135, 206, 235, .8);
     border-radius: 9px 9px 0 0;
 }
 .play-area{
@@ -61,6 +61,7 @@ main {
     height: 100%;
     flex-basis: 1;
     gap: 1rem;
+    text-align: center;
 }
 #status-el input {
     text-align: center;
@@ -118,7 +119,7 @@ main {
     font-size: 4rem;
 }
 #bottom-part {
-    background-color: rgb(253, 194, 203);
+    background-color: rgba(253, 194, 203, .9);
     border-radius: 0 0 9px 9px;
 }
 #bottom-part, #bottom-part article {
