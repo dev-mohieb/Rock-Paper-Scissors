@@ -6,7 +6,6 @@
 }
 body {
     min-height: 100vh;
-    width: 100%;
     display: grid;
     align-content: space-between;
     place-items: center;
@@ -72,7 +71,7 @@ main {
 }
 #status-el button {
     /* margin-top: 2rem; */
-    margin-bottom: -1rem;
+    margin-bottom: -1.5rem;
     padding: .5rem 1rem;
     font-family: inherit;
     border: none;
