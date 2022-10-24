@@ -6,4 +6,4 @@ I was supposed to create it step by step through the Odin Project's guiding but 
 I will keep polishing this project as I learn more but I'm proud of how it turned out right now.
 This project took me two days. CSS took the most time.
 
-Live link: www.mohieb-rps.netlify.app
+Live link: https://mohieb-rps.netlify.app/
