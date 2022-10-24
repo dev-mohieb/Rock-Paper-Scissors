@@ -4,11 +4,12 @@
     box-sizing: border-box;
     /* border: 1px solid red; */
 }
+
 body {
     min-height: 100vh;
     display: grid;
-    align-content: space-between;
-    place-items: center;
+    justify-items: center;
+    align-items: start;
     padding: 1rem 1rem 0 1rem;
     background-image: url(images/peakpx.jpg);
     background-size: cover;
@@ -16,7 +17,7 @@ body {
     background-position: center;
 }
 main {
-    width: 800px;
+    max-width: 800px;
     height: 500px;
     display: grid;
     grid-template-rows: 2fr 1fr;
@@ -35,7 +36,6 @@ main {
     border-radius: 9px 9px 0 0;
 }
 .play-area{
-    flex-shrink: 0;
     color: bisque;
     background-color: #111;
     height: 100%;
@@ -82,7 +82,8 @@ main {
 }
 #player-choice, #pc-choice {
     font-size: 5rem;
-    min-width: 85px;
+    width: 85px;
+    height: 85px;
     text-align: center;
 }
 .score-board {
@@ -146,7 +147,7 @@ main {
 
 footer {
     height: 30px;
-    width: 100%;
+    width: 80%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -158,7 +159,118 @@ footer {
     color: white;
     border-radius: 6px 6px 0 0;
     font-family: 'Changa', sans-serif;
+    position: absolute;
+    bottom: 0;
 }
 footer a {
     color: white;
+}
+
+@media (max-width: 768px) {
+
+main {
+    width: 90%;
+    height: 90vh;
+}
+
+#top-part {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr;
+    padding: 1rem 2rem 0 2rem;
+}
+.play-area{
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.around-play-area {
+    height: 280px;
+    width: 100%;
+}
+#player-choice {
+    margin-bottom: 1rem;
+}
+#pc-choice {
+    margin-top: 1rem;
+}
+.score-board {
+    height: 70%;
+    width: 80%;
+}
+#bottom-part {
+    padding: 0 1rem;
+}
+#bottom-part article {
+    width: 100%;
+    height: fit-content;
+}
+#bottom-part button {
+    font-size: 5rem;
+    padding: 1.5rem;
+}
+}
+
+
+@media (max-width: 575px) {
+
+    main {
+        width: 95%;
+        grid-template-rows: 3fr 1fr;
+    }
+    
+    #top-part {
+        padding: 1rem 1rem 0 1rem;
+    }
+    #player-choice, #pc-choice {
+        font-size: 4rem;
+    }
+    .score-board {
+        height: 70%;
+        width: 70%;
+    }
+    .score-banner {
+        font-size: 3.5rem;
+    }
+    #bottom-part {
+        padding: 0 1rem;
+    }
+    #bottom-part button {
+        font-size: 4rem;
+        padding: 2rem 1.2rem;
+    }
+}
+
+@media (max-width: 426px) {
+    main {
+        width: 100%;
+    }
+    
+    #top-part {
+        padding: 0;
+    }
+    .around-play-area {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #player-choice, #pc-choice {
+        font-size: 4rem;
+    }
+    .score-board {
+        height: 70%;
+        width: 70%;
+    }
+    .score-banner {
+        font-size: 3.5rem;
+    }
+    #bottom-part {
+        padding: 0 .5rem;
+    }
+    #bottom-part button {
+        font-size: 4rem;
+        padding: 2rem 1rem;
+    }
 }
