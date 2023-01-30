@@ -7,9 +7,9 @@
 
 body {
     min-height: 100vh;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-items: center;
-    align-items: start;
     padding: 1rem 1rem 0 1rem;
     background-image: url(images/peakpx.jpg);
     background-size: cover;
@@ -19,6 +19,7 @@ body {
 main {
     width: 750px;
     height: 500px;
+    margin: auto;
     display: grid;
     grid-template-rows: 2fr 1fr;
     border: 3px solid #111;
