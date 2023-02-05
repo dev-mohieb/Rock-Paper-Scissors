@@ -27,7 +27,11 @@ paperBtn.disabled = true
 scissorsBtn.disabled = true
 
 startGameBtn.addEventListener("click", () => {
-    playerName = nameInput.value.toUpperCase()
+    if (nameInput.value){
+        playerName = nameInput.value.toUpperCase()
+        } else {
+        playerName = 'PLAYER'}
+    
     playerNameEl.textContent = playerName
     nameInput.classList.add("hidden")
     startGameBtn.classList.add("hidden")
